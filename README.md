@@ -1,5 +1,5 @@
 # Godzippa!
-**GZip Compression / Decompression Category for NSData**
+**gzip Compression / Decompression Category for NSData**
 
 ## Example Usage
 ``` objective-c
