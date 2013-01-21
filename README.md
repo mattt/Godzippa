@@ -2,11 +2,12 @@
 **gzip Compression / Decompression Category for NSData**
 
 ## Example Usage
+
 ``` objective-c
 NSData *originalData = [@"Look out! It's..." dataUsingEncoding:NSUTF8StringEncoding];
-NSData *compressedData = [data dataByGZipCompressingWithError:nil];
+NSData *compressedData = [originalData dataByGZipCompressingWithError:nil];
 NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
-NSLog(@"%@", [NSString stringWithUTF8String:[decompressedData bytes]]);
+NSLog(@"%@ %@", [NSString stringWithUTF8String:[decompressedData bytes]], @"Godzippa!");
 ```
 
 ## Requirements

@@ -1,5 +1,4 @@
-// NSData+Godzippa.h
-//
+// main.m
 // Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,11 +21,16 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const GodzippaZlibErrorDomain;
+#import "NSData+Godzippa.h"
 
-@interface NSData (Godzippa)
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        NSData *originalData = [@"Look out! It's..." dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *compressedData = [originalData dataByGZipCompressingWithError:nil];
+        NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
+        NSLog(@"%@ %@", [NSString stringWithUTF8String:[decompressedData bytes]], @"Godzippa!");
+    }
 
-- (NSData *)dataByGZipCompressingWithError:(NSError **)error;
-- (NSData *)dataByGZipDecompressingDataWithError:(NSError **)error;
+    return 0;
+}
 
-@end
