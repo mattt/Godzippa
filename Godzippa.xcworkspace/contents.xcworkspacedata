@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Godzippa"
+      name = "Godzippa">
+      <FileRef
+         location = "group:NSData+Godzippa.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSData+Godzippa.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Example/Godzippa Example.xcodeproj">
+   </FileRef>
+</Workspace>
