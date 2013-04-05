@@ -81,7 +81,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 
     [compressedData setLength:zStream.total_out];
     
-	return [NSData dataWithData:compressedData];
+	return compressedData;
 }
 
 - (NSData *)dataByGZipDecompressingDataWithError:(NSError **)error {
