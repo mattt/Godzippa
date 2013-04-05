@@ -58,7 +58,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 	NSMutableData *compressedData = [NSMutableData dataWithLength:kGodzippaChunkSize];
     
 	do {
-		if (zStream.total_out >= [compressedData length]) {
+		if ((status == Z_BUF_ERROR) || (zStream.total_out == [compressedData length])) {
 			[compressedData increaseLengthBy:kGodzippaChunkSize];
 		}
         
@@ -66,7 +66,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 		zStream.avail_out = (unsigned int)([compressedData length] - zStream.total_out);
         
 		status = deflate(&zStream, Z_FINISH);
-	} while (status == Z_OK);
+	} while ((status == Z_OK) || (status == Z_BUF_ERROR));
     
 	deflateEnd(&zStream);
     
@@ -98,9 +98,6 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
     zStream.avail_in = (unsigned int)[self length];
     zStream.next_in = (Byte *)[self bytes];
 
-    NSUInteger estimatedLength = [self length] * 4;
-    NSMutableData *decompressedData = [NSMutableData dataWithCapacity:estimatedLength];
-
     OSStatus status;
     if ((status = inflateInit(&zStream)) != Z_OK) {
         if (error) {
@@ -111,15 +108,22 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
         return nil;
     }
 
+    NSUInteger estimatedLength = [self length] * 1.5;
+    NSMutableData *decompressedData = [NSMutableData dataWithLength:estimatedLength];
+    
     do {
-        zStream.avail_out = kGodzippaChunkSize;
-        zStream.next_out = [decompressedData mutableBytes];
+        if ((status == Z_BUF_ERROR) || (zStream.total_out == [decompressedData length])) {
+            [decompressedData increaseLengthBy:estimatedLength / 2];
+        }
         
-        status = inflate(&zStream, Z_NO_FLUSH);
-    } while (status == Z_OK);
+        zStream.next_out = [decompressedData mutableBytes] + zStream.total_out;
+        zStream.avail_out = (unsigned int)([decompressedData length] - zStream.total_out);
+        
+        status = inflate(&zStream, Z_FINISH);
+    } while ((status == Z_OK) || (status == Z_BUF_ERROR));
 
     inflateEnd(&zStream);
-
+    
     if ((status != Z_OK) && (status != Z_STREAM_END)) {
         if (error) {
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Error inflating payload", nil) forKey:NSLocalizedDescriptionKey];
@@ -128,6 +132,8 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 
         return nil;
     }
+    
+    [decompressedData setLength:zStream.total_out];
     
     return decompressedData;
 }
