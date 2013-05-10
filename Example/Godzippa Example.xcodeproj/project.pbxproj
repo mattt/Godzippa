@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2651A84173CC6370091504C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2651A83173CC6370091504C /* SenTestingKit.framework */; };
+		E2651A86173CC6370091504C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2651A85173CC6370091504C /* Cocoa.framework */; };
+		E2651A90173CC6370091504C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2651A8E173CC6370091504C /* InfoPlist.strings */; };
+		E2651A93173CC6370091504C /* Godzippa_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = E2651A92173CC6370091504C /* Godzippa_Test.m */; };
+		E2651A9D173CC68B0091504C /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2651A9B173CC68B0091504C /* test.txt */; };
+		E2651A9F173CC6FC0091504C /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = F86035A516AD0EE10027FDE8 /* NSData+Godzippa.m */; };
+		E2651AA0173CC7140091504C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F86035A716AD0F240027FDE8 /* libz.dylib */; };
 		F860358D16AD0E4D0027FDE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F860358C16AD0E4D0027FDE8 /* Foundation.framework */; };
 		F86035A116AD0EB40027FDE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F86035A016AD0EB40027FDE8 /* main.m */; };
 		F86035A616AD0EE10027FDE8 /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = F86035A516AD0EE10027FDE8 /* NSData+Godzippa.m */; };
@@ -26,6 +33,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E2651A82173CC6370091504C /* Godzippa Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa Test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2651A83173CC6370091504C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E2651A85173CC6370091504C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E2651A88173CC6370091504C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E2651A89173CC6370091504C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E2651A8A173CC6370091504C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2651A8D173CC6370091504C /* Godzippa Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Godzippa Test-Info.plist"; sourceTree = "<group>"; };
+		E2651A8F173CC6370091504C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2651A91173CC6370091504C /* Godzippa_Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Godzippa_Test.h; sourceTree = "<group>"; };
+		E2651A92173CC6370091504C /* Godzippa_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Godzippa_Test.m; sourceTree = "<group>"; };
+		E2651A94173CC6370091504C /* Godzippa Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Godzippa Test-Prefix.pch"; sourceTree = "<group>"; };
+		E2651A9B173CC68B0091504C /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		E2651A9C173CC68B0091504C /* test.txt.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = test.txt.gz; sourceTree = "<group>"; };
 		F860358816AD0E4D0027FDE8 /* Godzippa Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Godzippa Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F860358C16AD0E4D0027FDE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F860359F16AD0E740027FDE8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -36,6 +56,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E2651A7E173CC6370091504C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2651AA0173CC7140091504C /* libz.dylib in Frameworks */,
+				E2651A84173CC6370091504C /* SenTestingKit.framework in Frameworks */,
+				E2651A86173CC6370091504C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F860358516AD0E4D0027FDE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,10 +78,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2651A87173CC6370091504C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2651A88173CC6370091504C /* AppKit.framework */,
+				E2651A89173CC6370091504C /* CoreData.framework */,
+				E2651A8A173CC6370091504C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E2651A8B173CC6370091504C /* Godzippa Test */ = {
+			isa = PBXGroup;
+			children = (
+				E2651A91173CC6370091504C /* Godzippa_Test.h */,
+				E2651A92173CC6370091504C /* Godzippa_Test.m */,
+				E2651A8C173CC6370091504C /* Supporting Files */,
+				E2651A9A173CC68B0091504C /* test-data */,
+			);
+			path = "Godzippa Test";
+			sourceTree = "<group>";
+		};
+		E2651A8C173CC6370091504C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2651A8D173CC6370091504C /* Godzippa Test-Info.plist */,
+				E2651A8E173CC6370091504C /* InfoPlist.strings */,
+				E2651A94173CC6370091504C /* Godzippa Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2651A9A173CC68B0091504C /* test-data */ = {
+			isa = PBXGroup;
+			children = (
+				E2651A9B173CC68B0091504C /* test.txt */,
+				E2651A9C173CC68B0091504C /* test.txt.gz */,
+			);
+			path = "test-data";
+			sourceTree = "<group>";
+		};
 		F860357D16AD0E4C0027FDE8 = {
 			isa = PBXGroup;
 			children = (
 				F860358E16AD0E4D0027FDE8 /* Source */,
+				E2651A8B173CC6370091504C /* Godzippa Test */,
 				F860358B16AD0E4D0027FDE8 /* Frameworks */,
 				F860358916AD0E4D0027FDE8 /* Products */,
 				F86035A216AD0ED10027FDE8 /* Vendor */,
@@ -62,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F860358816AD0E4D0027FDE8 /* Godzippa Example */,
+				E2651A82173CC6370091504C /* Godzippa Test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +143,9 @@
 			children = (
 				F86035A716AD0F240027FDE8 /* libz.dylib */,
 				F860358C16AD0E4D0027FDE8 /* Foundation.framework */,
+				E2651A83173CC6370091504C /* SenTestingKit.framework */,
+				E2651A85173CC6370091504C /* Cocoa.framework */,
+				E2651A87173CC6370091504C /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +189,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E2651A81173CC6370091504C /* Godzippa Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2651A95173CC6370091504C /* Build configuration list for PBXNativeTarget "Godzippa Test" */;
+			buildPhases = (
+				E2651A7D173CC6370091504C /* Sources */,
+				E2651A7E173CC6370091504C /* Frameworks */,
+				E2651A7F173CC6370091504C /* Resources */,
+				E2651A80173CC6370091504C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Godzippa Test";
+			productName = "Godzippa Test";
+			productReference = E2651A82173CC6370091504C /* Godzippa Test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F860358716AD0E4D0027FDE8 /* Godzippa Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F860359716AD0E4D0027FDE8 /* Build configuration list for PBXNativeTarget "Godzippa Example" */;
@@ -153,11 +246,49 @@
 			projectRoot = "";
 			targets = (
 				F860358716AD0E4D0027FDE8 /* Godzippa Example */,
+				E2651A81173CC6370091504C /* Godzippa Test */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		E2651A7F173CC6370091504C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2651A90173CC6370091504C /* InfoPlist.strings in Resources */,
+				E2651A9D173CC68B0091504C /* test.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2651A80173CC6370091504C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		E2651A7D173CC6370091504C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2651A9F173CC6FC0091504C /* NSData+Godzippa.m in Sources */,
+				E2651A93173CC6370091504C /* Godzippa_Test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F860358416AD0E4D0027FDE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,7 +300,52 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E2651A8E173CC6370091504C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2651A8F173CC6370091504C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		E2651A96173CC6370091504C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Godzippa Test/Godzippa Test-Prefix.pch";
+				INFOPLIST_FILE = "Godzippa Test/Godzippa Test-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E2651A97173CC6370091504C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Godzippa Test/Godzippa Test-Prefix.pch";
+				INFOPLIST_FILE = "Godzippa Test/Godzippa Test-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		F860359516AD0E4D0027FDE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -228,6 +404,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_WARN_PEDANTIC = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -237,6 +414,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_WARN_PEDANTIC = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -244,6 +422,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E2651A95173CC6370091504C /* Build configuration list for PBXNativeTarget "Godzippa Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2651A96173CC6370091504C /* Debug */,
+				E2651A97173CC6370091504C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F860358216AD0E4D0027FDE8 /* Build configuration list for PBXProject "Godzippa Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
