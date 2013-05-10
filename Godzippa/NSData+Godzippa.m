@@ -62,7 +62,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 			[compressedData increaseLengthBy:kGodzippaChunkSize];
 		}
         
-		zStream.next_out = [compressedData mutableBytes] + zStream.total_out;
+		zStream.next_out = (Bytef*)[compressedData mutableBytes] + zStream.total_out;
 		zStream.avail_out = (unsigned int)([compressedData length] - zStream.total_out);
         
 		status = deflate(&zStream, Z_FINISH);
@@ -116,7 +116,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
             [decompressedData increaseLengthBy:estimatedLength / 2];
         }
         
-        zStream.next_out = [decompressedData mutableBytes] + zStream.total_out;
+        zStream.next_out = (Bytef*)[decompressedData mutableBytes] + zStream.total_out;
         zStream.avail_out = (unsigned int)([decompressedData length] - zStream.total_out);
         
         status = inflate(&zStream, Z_FINISH);
