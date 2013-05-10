@@ -108,7 +108,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
         return nil;
     }
 
-    NSUInteger estimatedLength = [self length] * 1.5;
+    NSUInteger estimatedLength = (NSUInteger)((double)[self length] * 1.5);
     NSMutableData *decompressedData = [NSMutableData dataWithLength:estimatedLength];
     
     do {

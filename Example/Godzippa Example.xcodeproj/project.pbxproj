@@ -226,6 +226,7 @@
 		F860359816AD0E4D0027FDE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -235,6 +236,7 @@
 		F860359916AD0E4D0027FDE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
