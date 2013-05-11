@@ -26,11 +26,20 @@
 
 static NSUInteger const kGodzippaChunkSize = 1024;
 
+static const int DEFAULT_MEM_LEVEL = 8;
+static const int DEFAULT_WINDOW_BITS = 15;
+static const int DEFAULT_WINDOW_BIT_USE_GZIP_HEADER = 16;
+static const int DEFAULT_WINDOW_BITS_WITH_GZIP_HEADER = DEFAULT_WINDOW_BITS + DEFAULT_WINDOW_BIT_USE_GZIP_HEADER;
+
 NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 
 @implementation NSData (Godzippa)
 
 - (NSData *)dataByGZipCompressingWithError:(NSError **)error {
+	return [self dataByGZipCompressingUsingGzipHeader:NO error:error];
+}
+
+- (NSData *)dataByGZipCompressingUsingGzipHeader:(BOOL)useHeader error:(NSError **)error {
 	if ([self length] == 0) {
 		return self;
 	}
@@ -46,7 +55,15 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 	zStream.total_out = 0;
 
     OSStatus status;
-	if ((status = deflateInit(&zStream, Z_DEFAULT_COMPRESSION)) != Z_OK) {
+    if (useHeader)
+    {
+        status = deflateInit(&zStream, Z_DEFAULT_COMPRESSION);
+    }
+    else
+    {
+        status = deflateInit2(&zStream, Z_DEFAULT_COMPRESSION, Z_DEFLATED, DEFAULT_WINDOW_BITS_WITH_GZIP_HEADER, DEFAULT_MEM_LEVEL, Z_DEFAULT_STRATEGY);
+    }
+	if (status != Z_OK) {
 		if (error) {
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Failed deflateInit", nil) forKey:NSLocalizedDescriptionKey];
             *error = [[NSError alloc] initWithDomain:GodzippaZlibErrorDomain code:status userInfo:userInfo];
@@ -85,6 +102,10 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 }
 
 - (NSData *)dataByGZipDecompressingDataWithError:(NSError **)error {
+    return [self dataByGZipDecompressingDataUsingGzipHeader:NO error:error];
+}
+
+- (NSData *)dataByGZipDecompressingDataUsingGzipHeader:(BOOL)useHeader error:(NSError **)error {
     if ([self length] == 0) {
 		return self;
 	}
@@ -99,7 +120,15 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
     zStream.next_in = (Byte *)[self bytes];
 
     OSStatus status;
-    if ((status = inflateInit(&zStream)) != Z_OK) {
+    if (useHeader)
+    {
+        status = inflateInit(&zStream);
+    }
+    else
+    {
+        status = inflateInit2(&zStream, DEFAULT_WINDOW_BITS_WITH_GZIP_HEADER);
+    }
+    if (status != Z_OK) {
         if (error) {
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Failed inflateInit", nil) forKey:NSLocalizedDescriptionKey];
             *error = [[NSError alloc] initWithDomain:GodzippaZlibErrorDomain code:status userInfo:userInfo];
