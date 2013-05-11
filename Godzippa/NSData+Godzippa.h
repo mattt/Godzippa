@@ -35,7 +35,17 @@
 /**
  
  */
+- (NSData *)dataByGZipCompressingUsingGzipHeader:(BOOL)useHeader error:(NSError **)error;
+
+/**
+ 
+ */
 - (NSData *)dataByGZipDecompressingDataWithError:(NSError **)error;
+
+/**
+ 
+ */
+- (NSData *)dataByGZipDecompressingDataUsingGzipHeader:(BOOL)useHeader error:(NSError **)error;
 
 @end
 
