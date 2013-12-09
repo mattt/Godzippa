@@ -1,5 +1,5 @@
-// main.m
-// Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
+// GodzippaTest.h
+// Copyright (c) 2013 Mattt Thompson (http://mattt.me/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -19,17 +19,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "GodzippaTest.h"
 
 #import "NSData+Godzippa.h"
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        NSData *originalData = [@"Look out! It's..." dataUsingEncoding:NSUTF8StringEncoding];
-        NSData *compressedData = [originalData dataByGZipCompressingWithError:nil];
-        NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
-        NSLog(@"%@ %@", [NSString stringWithUTF8String:[decompressedData bytes]], @"Godzippa!");
-    }
+@implementation GodzippaTest
 
-    return 0;
+- (void)testExample {
+	NSData *data = [NSData dataWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"txt"]];
+	NSError *error = nil;
+
+	NSData *compressedData = [data dataByGZipCompressingWithError:&error];
+	STAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
+
+	NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:&error];
+	STAssertNil(error, @"Error decompressing data: %@", [error localizedDescription]);
+	STAssertTrue([data isEqualToData:decompressedData], @"Decompression test failed");
 }
+
+@end

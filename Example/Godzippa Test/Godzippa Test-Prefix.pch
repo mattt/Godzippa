@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'Godzippa Test' target in the 'Godzippa Test' project
-//
-
-#ifdef __OBJC__
-	#import <Cocoa/Cocoa.h>
-#endif
