@@ -33,7 +33,7 @@
 
 /**
  Returns the deflated of the receiver using gzip compression.
- 
+
  @param error The error that occurred while attempting to deflate the receiver.
 
  @return The compressed data.
@@ -52,8 +52,8 @@
  @return The compressed data.
  */
 - (NSData *)dataByGZipCompressingAtLevel:(int)level
-                              windowBits:(int)windowBits
-                                memLevel:(int)memLevel
+                              windowSize:(int)windowBits
+                             memoryLevel:(int)memLevel
                                 strategy:(int)strategy
                                    error:(NSError * __autoreleasing *)error;
 
@@ -73,12 +73,12 @@
 /**
  Returns the inflated of the receiver using gzip compression with the specified zlib value for window size.
 
- @param windowBits The base two logarithm of the maximum window size (the size of the history buffer). Must be greater than or equal to the windowBits value provided to dataByGZipCompressingAtLevel:windowBits:memLevel:strategy:error: while compressing.
+ @param windowBits The base two logarithm of the maximum window size (the size of the history buffer). Must be greater than or equal to the windowBits value provided to dataByGZipCompressingAtLevel:windowSize:memoryLevel:strategy:error: while compressing.
  @param error The error that occurred while attempting to inflate the receiver.
 
  @return The decompressed data.
  */
-- (NSData *)dataByGZipDecompressingDataWithWindowBits:(int)windowBits
+- (NSData *)dataByGZipDecompressingDataWithWindowSize:(int)windowBits
                                                 error:(NSError * __autoreleasing *)error;
 
 @end

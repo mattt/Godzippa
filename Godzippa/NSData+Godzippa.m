@@ -34,12 +34,12 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 @implementation NSData (Godzippa)
 
 - (NSData *)dataByGZipCompressingWithError:(NSError * __autoreleasing *)error {
-    return [self dataByGZipCompressingAtLevel:Z_DEFAULT_COMPRESSION windowBits:kGodzippaDefaultWindowBitsWithGZipHeader memLevel:kGodzippaDefaultMemoryLevel strategy:Z_DEFAULT_STRATEGY error:error];
+    return [self dataByGZipCompressingAtLevel:Z_DEFAULT_COMPRESSION windowSize:kGodzippaDefaultWindowBitsWithGZipHeader memoryLevel:kGodzippaDefaultMemoryLevel strategy:Z_DEFAULT_STRATEGY error:error];
 }
 
 - (NSData *)dataByGZipCompressingAtLevel:(int)level
-                              windowBits:(int)windowBits
-                                memLevel:(int)memLevel
+                              windowSize:(int)windowBits
+                             memoryLevel:(int)memLevel
                                 strategy:(int)strategy
                                    error:(NSError * __autoreleasing *)error
 {
@@ -66,22 +66,22 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 
         return nil;
     }
-    
+
     NSMutableData *compressedData = [NSMutableData dataWithLength:kGodzippaChunkSize];
 
     do {
         if ((status == Z_BUF_ERROR) || (zStream.total_out == [compressedData length])) {
             [compressedData increaseLengthBy:kGodzippaChunkSize];
         }
-        
+
         zStream.next_out = (Bytef*)[compressedData mutableBytes] + zStream.total_out;
         zStream.avail_out = (unsigned int)([compressedData length] - zStream.total_out);
-        
+
         status = deflate(&zStream, Z_FINISH);
     } while ((status == Z_OK) || (status == Z_BUF_ERROR));
-    
+
     deflateEnd(&zStream);
-    
+
     if ((status != Z_OK) && (status != Z_STREAM_END)) {
         if (error) {
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Error deflating payload", nil) forKey:NSLocalizedDescriptionKey];
@@ -92,15 +92,15 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
     }
 
     [compressedData setLength:zStream.total_out];
-    
+
     return compressedData;
 }
 
 - (NSData *)dataByGZipDecompressingDataWithError:(NSError * __autoreleasing *)error {
-    return [self dataByGZipDecompressingDataWithWindowBits:kGodzippaDefaultWindowBitsWithGZipHeader error:error];
+    return [self dataByGZipDecompressingDataWithWindowSize:kGodzippaDefaultWindowBitsWithGZipHeader error:error];
 }
 
-- (NSData *)dataByGZipDecompressingDataWithWindowBits:(int)windowBits
+- (NSData *)dataByGZipDecompressingDataWithWindowSize:(int)windowBits
                                                 error:(NSError * __autoreleasing *)error
 {
     if ([self length] == 0) {
@@ -128,20 +128,20 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 
     NSUInteger estimatedLength = (NSUInteger)((double)[self length] * 1.5);
     NSMutableData *decompressedData = [NSMutableData dataWithLength:estimatedLength];
-    
+
     do {
         if ((status == Z_BUF_ERROR) || (zStream.total_out == [decompressedData length])) {
             [decompressedData increaseLengthBy:estimatedLength / 2];
         }
-        
+
         zStream.next_out = (Bytef*)[decompressedData mutableBytes] + zStream.total_out;
         zStream.avail_out = (unsigned int)([decompressedData length] - zStream.total_out);
-        
+
         status = inflate(&zStream, Z_FINISH);
     } while ((status == Z_OK) || (status == Z_BUF_ERROR));
 
     inflateEnd(&zStream);
-    
+
     if ((status != Z_OK) && (status != Z_STREAM_END)) {
         if (error) {
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Error inflating payload", nil) forKey:NSLocalizedDescriptionKey];
@@ -150,7 +150,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 
         return nil;
     }
-    
+
     [decompressedData setLength:zStream.total_out];
     
     return decompressedData;
