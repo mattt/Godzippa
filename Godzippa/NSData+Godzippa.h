@@ -27,15 +27,34 @@
  */
 @interface NSData (Godzippa)
 
-/**
- 
- */
-- (NSData *)dataByGZipCompressingWithError:(NSError **)error;
+///-----------------
 
 /**
  
  */
-- (NSData *)dataByGZipDecompressingDataWithError:(NSError **)error;
+- (NSData *)dataByGZipCompressingWithError:(NSError * __autoreleasing *)error;
+
+/**
+ 
+ */
+- (NSData *)dataByGZipCompressingAtLevel:(int)level
+                              windowBits:(int)windowBits
+                                memLevel:(int)memLevel
+                                strategy:(int)strategy
+                                   error:(NSError * __autoreleasing *)error;
+
+///-----------------
+
+/**
+ 
+ */
+- (NSData *)dataByGZipDecompressingDataWithError:(NSError * __autoreleasing *)error;
+
+/**
+ 
+ */
+- (NSData *)dataByGZipDecompressingDataWithWindowBits:(int)windowBits
+                                                error:(NSError * __autoreleasing *)error;
 
 @end
 

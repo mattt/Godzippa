@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
         NSData *originalData = [@"Look out! It's..." dataUsingEncoding:NSUTF8StringEncoding];
         NSData *compressedData = [originalData dataByGZipCompressingWithError:nil];
         NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
-        NSLog(@"%@ %@", [NSString stringWithUTF8String:[decompressedData bytes]], @"Godzippa!");
+        NSLog(@"%@ %@", [[NSString alloc] initWithData:decompressedData encoding:NSUTF8StringEncoding], @"Godzippa!");
     }
 
     return 0;
