@@ -23,18 +23,43 @@
 
 #import "NSData+Godzippa.h"
 
+@interface GodzippaTest ()
+@property (readwrite, nonatomic, copy) NSData *data;
+@end
+
 @implementation GodzippaTest
 
-- (void)testExample {
-	NSData *data = [NSData dataWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"txt"]];
-	NSError *error = nil;
+- (void)setUp {
+    [super setUp];
 
-	NSData *compressedData = [data dataByGZipCompressingWithError:&error];
+    self.data = [NSData dataWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"txt"]];
+}
+
+- (void)testCompressionOfData {
+    NSError *error = nil;
+	[self.data dataByGZipCompressingWithError:&error];
+
 	STAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
+}
 
-	NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:&error];
-	STAssertNil(error, @"Error decompressing data: %@", [error localizedDescription]);
-	STAssertTrue([data isEqualToData:decompressedData], @"Decompression test failed");
+- (void)testCompressionOfEmptyDataIsEmpty {
+	NSData *compressedData = [[NSData data] dataByGZipCompressingWithError:nil];
+    STAssertTrue([[NSData data] isEqualToData:compressedData], @"compression of empty data is not empty");
+}
+
+- (void)testDecompressionOfCompressedData {
+    NSError *error = nil;
+    [[self.data dataByGZipCompressingWithError:&error] dataByGZipDecompressingDataWithError:&error];
+
+	STAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
+}
+
+- (void)testEqualityForDecompressionOfCompressedData {
+    NSData *compressedData = [self.data dataByGZipCompressingWithError:nil];
+	NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
+
+    STAssertNotNil(self.data, @"compressed data is nil");
+	STAssertTrue([self.data isEqualToData:decompressedData], @"decompression of compressed data not same as original");
 }
 
 @end
