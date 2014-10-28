@@ -21,7 +21,7 @@
 
 #import "GodzippaTest.h"
 
-#import "NSData+Godzippa.h"
+#import "Godzippa.h"
 
 @interface GodzippaTest ()
 @property (readwrite, nonatomic, copy) NSString *path;
