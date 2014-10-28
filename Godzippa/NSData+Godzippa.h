@@ -83,6 +83,23 @@
 
 @end
 
+@interface NSFileManager (Godzippa)
+
+- (void)gzipCompressWithSourceFilePath:(NSString *)sourcePath
+                 toDestinationFilePath:(NSString *)destinationPath
+                                 error:(NSError * __autoreleasing *)error;
+
+-(void)gzipCompressWithSourceFilePath:(NSString *)sourcePath
+                toDestinationFilePath:(NSString *)destinationPath
+                                level:(int)level
+                                error:(NSError *__autoreleasing *)error;
+
+- (void)gzipDecompressWithSourceFilePath:(NSString *)sourcePath
+                   toDestinationFilePath:(NSString *)destinationPath
+                                   error:(NSError * __autoreleasing *)error;
+
+@end
+
 ///----------------
 /// @name Constants
 ///----------------

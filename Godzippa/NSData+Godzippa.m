@@ -157,3 +157,74 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
 }
 
 @end
+
+@implementation NSFileManager (Godzippa)
+
+-(void)gzipCompressWithSourceFilePath:(NSString *)sourcePath
+                toDestinationFilePath:(NSString *)destinationPath
+                                error:(NSError *__autoreleasing *)error
+{
+    [self gzipCompressWithSourceFilePath:sourcePath
+                   toDestinationFilePath:destinationPath
+                                   level:Z_DEFAULT_COMPRESSION
+                                   error:error];
+}
+
+-(void)gzipCompressWithSourceFilePath:(NSString *)sourcePath
+                toDestinationFilePath:(NSString *)destinationPath
+                                level:(int)level
+                                error:(NSError *__autoreleasing *)error
+{
+    NSDictionary *sourceAttrs = [self attributesOfItemAtPath:sourcePath error:error];
+    if ([sourceAttrs[NSFileSize] isEqualTo:@0]) {
+        return;
+    }
+    
+    NSFileHandle *sourceFileHandle = [NSFileHandle fileHandleForReadingAtPath:sourcePath];
+    NSUInteger bufferSize = 4096;
+    NSData *data = [sourceFileHandle readDataOfLength:bufferSize];
+    
+    const char* mode = NULL;
+    if (level == Z_DEFAULT_COMPRESSION) {
+        mode = "w";
+    } else {
+        mode = [NSString stringWithFormat:@"w%d", level].UTF8String;
+    }
+    gzFile fileOutput = gzopen(destinationPath.UTF8String, mode);
+    while (data.length > 0) @autoreleasepool {
+        gzwrite(fileOutput, data.bytes, (unsigned) data.length);
+        data = [sourceFileHandle readDataOfLength:bufferSize];
+    }
+    gzclose(fileOutput);
+    
+    [sourceFileHandle closeFile];
+}
+
+-(void)gzipDecompressWithSourceFilePath:(NSString *)sourcePath
+                  toDestinationFilePath:(NSString *)destinationPath
+                                  error:(NSError *__autoreleasing *)error
+{
+    NSDictionary *sourceAttrs = [self attributesOfItemAtPath:sourcePath error:error];
+    if ([sourceAttrs[NSFileSize] isEqualTo:@0]) {
+        return;
+    }
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
+        [[NSFileManager defaultManager] createFileAtPath:destinationPath
+                                                contents:nil
+                                              attributes:nil];
+    }
+    NSFileHandle *destinationFileHandle = [NSFileHandle fileHandleForWritingAtPath:destinationPath];
+    unsigned bufferSize = 4096;
+    char buffer[4096];
+    gzFile fileInput = gzopen(sourcePath.UTF8String, "r");
+    int read;
+    while ((read = gzread(fileInput, buffer, bufferSize)) > 0) @autoreleasepool {
+        [destinationFileHandle writeData:[NSData dataWithBytes:buffer length:read]];
+    }
+    gzclose(fileInput);
+    [destinationFileHandle synchronizeFile];
+    [destinationFileHandle closeFile];
+}
+
+@end

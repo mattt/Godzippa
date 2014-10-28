@@ -24,6 +24,7 @@
 #import "NSData+Godzippa.h"
 
 @interface GodzippaTest ()
+@property (readwrite, nonatomic, copy) NSString *path;
 @property (readwrite, nonatomic, copy) NSData *data;
 @end
 
@@ -32,7 +33,8 @@
 - (void)setUp {
     [super setUp];
 
-    self.data = [NSData dataWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"txt"]];
+    self.path = [[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"txt"];
+    self.data = [NSData dataWithContentsOfFile:self.path];
 }
 
 - (void)testCompressionOfData {
@@ -60,6 +62,47 @@
 
     STAssertNotNil(self.data, @"compressed data is nil");
 	STAssertTrue([self.data isEqualToData:decompressedData], @"decompression of compressed data not same as original");
+}
+
+- (void)testCompressFile {
+    NSData *compressedData = [self.data dataByGZipCompressingWithError:nil];
+    
+    NSString *compressedFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"compressed.gzip"];
+    [[NSFileManager defaultManager] gzipCompressWithSourceFilePath:self.path
+                                             toDestinationFilePath:compressedFilePath
+                                                             error:nil];
+    
+    NSDictionary *attr = [[NSFileManager defaultManager] attributesOfItemAtPath:compressedFilePath
+                                                                          error:nil];
+    
+    STAssertEqualObjects(attr[NSFileSize], @(compressedData.length), @"compressed file size doesn't match with the expected size");
+    STAssertEqualObjects(compressedData, [NSData dataWithContentsOfFile:compressedFilePath], @"");
+    
+    [[NSFileManager defaultManager] removeItemAtPath:compressedFilePath
+                                               error:nil];
+}
+
+- (void)testDecompressFile {
+    NSString *compressedFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"compressed.gzip"];
+    [[NSFileManager defaultManager] gzipCompressWithSourceFilePath:self.path
+                                             toDestinationFilePath:compressedFilePath
+                                                             error:nil];
+    
+    NSString *uncompressedFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"uncompressed.gzip"];
+    [[NSFileManager defaultManager] gzipDecompressWithSourceFilePath:compressedFilePath
+                                               toDestinationFilePath:uncompressedFilePath
+                                                               error:nil];
+    
+    NSDictionary *attr = [[NSFileManager defaultManager] attributesOfItemAtPath:uncompressedFilePath
+                                                                          error:nil];
+    
+    STAssertEqualObjects(attr[NSFileSize], @(self.data.length), @"");
+    STAssertEqualObjects(self.data, [NSData dataWithContentsOfFile:uncompressedFilePath], @"");
+    
+    [[NSFileManager defaultManager] removeItemAtPath:compressedFilePath
+                                               error:nil];
+    [[NSFileManager defaultManager] removeItemAtPath:uncompressedFilePath
+                                               error:nil];
 }
 
 @end
