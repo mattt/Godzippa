@@ -10,6 +10,15 @@
       <FileRef
          location = "group:NSData+Godzippa.m">
       </FileRef>
+      <FileRef
+         location = "group:NSFileManager+Godzippa.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSFileManager+Godzippa.m">
+      </FileRef>
+      <FileRef
+         location = "group:Godzippa.h">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Example/Godzippa Example.xcodeproj">
