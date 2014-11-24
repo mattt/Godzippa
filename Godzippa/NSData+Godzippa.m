@@ -22,8 +22,6 @@
 
 #import "NSData+Godzippa.h"
 
-#import <zlib.h>
-
 static const int kGodzippaChunkSize = 1024;
 static const int kGodzippaDefaultMemoryLevel = 8;
 static const int kGodzippaDefaultWindowBits = 15;
