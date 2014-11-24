@@ -19,47 +19,49 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "GodzippaTest.h"
+#import "Godzippa.h"
 
-#import "NSData+Godzippa.h"
+#import <XCTest/XCTest.h>
 
-@interface GodzippaTest ()
-@property (readwrite, nonatomic, copy) NSData *data;
+@interface GodzippaDataTestCase : XCTestCase
+@property (nonatomic, copy) NSData *data;
 @end
 
-@implementation GodzippaTest
+@implementation GodzippaDataTestCase
 
 - (void)setUp {
     [super setUp];
 
-    self.data = [NSData dataWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"txt"]];
+    self.data = [@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." dataUsingEncoding:NSUTF8StringEncoding];
 }
+
+#pragma mark -
 
 - (void)testCompressionOfData {
     NSError *error = nil;
 	[self.data dataByGZipCompressingWithError:&error];
 
-	STAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
+	XCTAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
 }
 
 - (void)testCompressionOfEmptyDataIsEmpty {
 	NSData *compressedData = [[NSData data] dataByGZipCompressingWithError:nil];
-    STAssertTrue([[NSData data] isEqualToData:compressedData], @"compression of empty data is not empty");
+    XCTAssertTrue([[NSData data] isEqualToData:compressedData], @"compression of empty data is not empty");
 }
 
 - (void)testDecompressionOfCompressedData {
     NSError *error = nil;
     [[self.data dataByGZipCompressingWithError:&error] dataByGZipDecompressingDataWithError:&error];
 
-	STAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
+	XCTAssertNil(error, @"Error compressing data: %@", [error localizedDescription]);
 }
 
 - (void)testEqualityForDecompressionOfCompressedData {
     NSData *compressedData = [self.data dataByGZipCompressingWithError:nil];
 	NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
 
-    STAssertNotNil(self.data, @"compressed data is nil");
-	STAssertTrue([self.data isEqualToData:decompressedData], @"decompression of compressed data not same as original");
+    XCTAssertNotNil(self.data, @"compressed data is nil");
+	XCTAssertTrue([self.data isEqualToData:decompressedData], @"decompression of compressed data not same as original");
 }
 
 @end

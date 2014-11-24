@@ -66,7 +66,7 @@ static const int kGodzippaChunkSize = 4096;
                     NSData *data = [sourceFileHandle readDataOfLength:kGodzippaChunkSize];
                     numberOfBytesWritten = gzwrite(output, data.bytes, (unsigned) data.length);
                 }
-            } while (numberOfBytesWritten > 0);
+            } while (numberOfBytesWritten == kGodzippaChunkSize);
         }
         gzclose(output);
     }
@@ -106,9 +106,9 @@ static const int kGodzippaChunkSize = 4096;
                 @autoreleasepool {
                     NSMutableData *mutableData = [NSMutableData dataWithLength:kGodzippaChunkSize];
                     numberOfBytesRead = gzread(input, mutableData.mutableBytes, kGodzippaChunkSize);
-                    [destinationFileHandle writeData:mutableData];
+                    [destinationFileHandle writeData:[mutableData subdataWithRange:NSMakeRange(0, (NSUInteger)numberOfBytesRead)]];
                 }
-            } while (numberOfBytesRead > 0);
+            } while (numberOfBytesRead == kGodzippaChunkSize);
         }
         gzclose(input);
     }
