@@ -1,13 +1,27 @@
 # Godzippa!
-**gzip Compression / Decompression Category for NSData**
+**gzip Compression / Decompression Category for NSData & NSFileManager**
 
 ## Example Usage
 
-``` objective-c
+### NSData
+
+```objective-c
 NSData *originalData = [@"Look out! It's..." dataUsingEncoding:NSUTF8StringEncoding];
 NSData *compressedData = [originalData dataByGZipCompressingWithError:nil];
 NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:nil];
 NSLog(@"%@ %@", [NSString stringWithUTF8String:[decompressedData bytes]], @"Godzippa!");
+```
+
+### NSFileManager
+
+```objective-c
+NSFileManager *fileManager = [NSFileManager defaultManager];
+NSURL *file = [NSURL fileURLWithPath:@"/path/to/file.txt"];
+NSError *error = nil;
+
+[fileManager GZipCompressFile:file
+        writingContentsToFile:[file URLByAppendingPathExtension:@"gz"]
+                        error:&error];
 ```
 
 ## Requirements
