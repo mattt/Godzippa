@@ -1,6 +1,6 @@
 // NSFileManager+Godzippa.m
 //
-// Copyright (c) 2012–2014 Mattt Thompson (http://mattt.me/)
+// Copyright (c) 2012–2015 Mattt Thompson (http://mattt.me/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -89,7 +89,7 @@ static const int kGodzippaChunkSize = 4096;
     if (!sourceAttributes || [sourceAttributes[NSFileSize] unsignedIntegerValue] == 0) {
         return NO;
     }
-    
+
     if (![[NSFileManager defaultManager] fileExistsAtPath:destinationFile.path]) {
         if (![[NSFileManager defaultManager] createFileAtPath:destinationFile.path contents:nil attributes:nil]) {
             return NO;
