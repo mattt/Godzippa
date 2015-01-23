@@ -22,6 +22,8 @@
 
 #import "NSFileManager+Godzippa.h"
 
+#import <zlib.h>
+
 static const int kGodzippaChunkSize = 4096;
 
 @implementation NSFileManager (Godzippa)
