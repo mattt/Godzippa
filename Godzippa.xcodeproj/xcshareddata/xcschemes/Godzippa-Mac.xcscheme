@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4921F911B06617700ED2F76"
-               BuildableName = "Godzippa-Mac.framework"
+               BuildableName = "Godzippa.framework"
                BlueprintName = "Godzippa-Mac"
                ReferencedContainer = "container:Godzippa.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4921F911B06617700ED2F76"
-            BuildableName = "Godzippa-Mac.framework"
+            BuildableName = "Godzippa.framework"
             BlueprintName = "Godzippa-Mac"
             ReferencedContainer = "container:Godzippa.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4921F911B06617700ED2F76"
-            BuildableName = "Godzippa-Mac.framework"
+            BuildableName = "Godzippa.framework"
             BlueprintName = "Godzippa-Mac"
             ReferencedContainer = "container:Godzippa.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4921F911B06617700ED2F76"
-            BuildableName = "Godzippa-Mac.framework"
+            BuildableName = "Godzippa.framework"
             BlueprintName = "Godzippa-Mac"
             ReferencedContainer = "container:Godzippa.xcodeproj">
          </BuildableReference>
