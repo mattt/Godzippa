@@ -26,7 +26,6 @@
 		E4921F681B065FEA00ED2F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4921F8B1B06611200ED2F76 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E4921F921B06617700ED2F76 /* Godzippa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Godzippa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4921F951B06617700ED2F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Godzippa/Info.plist; sourceTree = "<group>"; };
 		E4921FAB1B06619300ED2F76 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		E4921FB21B0680EB00ED2F76 /* NSData+Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Godzippa.h"; sourceTree = "<group>"; };
 		E4921FB31B0680EB00ED2F76 /* NSData+Godzippa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Godzippa.m"; sourceTree = "<group>"; };
@@ -55,14 +54,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E415BE871B0A5C1B00BC3426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4921FAB1B06619300ED2F76 /* libz.dylib */,
+				E4921F8B1B06611200ED2F76 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4921F5A1B065FEA00ED2F76 = {
 			isa = PBXGroup;
 			children = (
 				E4921FB71B0680EB00ED2F76 /* Godzippa */,
-				E4921FAB1B06619300ED2F76 /* libz.dylib */,
-				E4921F8B1B06611200ED2F76 /* libz.dylib */,
-				E4921F661B065FEA00ED2F76 /* Godzippa */,
-				E4921F931B06617700ED2F76 /* Godzippa-Mac */,
+				E415BE871B0A5C1B00BC3426 /* Frameworks */,
 				E4921F651B065FEA00ED2F76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,34 +81,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E4921F661B065FEA00ED2F76 /* Godzippa */ = {
-			isa = PBXGroup;
-			children = (
-				E4921F671B065FEA00ED2F76 /* Supporting Files */,
-			);
-			path = Godzippa;
-			sourceTree = "<group>";
-		};
 		E4921F671B065FEA00ED2F76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				E4921F681B065FEA00ED2F76 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E4921F931B06617700ED2F76 /* Godzippa-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				E4921F941B06617700ED2F76 /* Supporting Files */,
-			);
-			path = "Godzippa-Mac";
-			sourceTree = "<group>";
-		};
-		E4921F941B06617700ED2F76 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E4921F951B06617700ED2F76 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -116,6 +97,7 @@
 				E4921FB41B0680EB00ED2F76 /* NSFileManager+Godzippa.h */,
 				E4921FB51B0680EB00ED2F76 /* NSFileManager+Godzippa.m */,
 				E4921FB61B0680EB00ED2F76 /* Godzippa.h */,
+				E4921F671B065FEA00ED2F76 /* Supporting Files */,
 			);
 			path = Godzippa;
 			sourceTree = "<group>";
