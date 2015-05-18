@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		E4921F8C1B06611200ED2F76 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4921F8B1B06611200ED2F76 /* libz.dylib */; };
 		E4921FAC1B06619300ED2F76 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4921FAB1B06619300ED2F76 /* libz.dylib */; };
-		E4921FB81B0680EB00ED2F76 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB21B0680EB00ED2F76 /* NSData+Godzippa.h */; };
-		E4921FB91B0680EB00ED2F76 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB21B0680EB00ED2F76 /* NSData+Godzippa.h */; };
+		E4921FB81B0680EB00ED2F76 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB21B0680EB00ED2F76 /* NSData+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4921FB91B0680EB00ED2F76 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB21B0680EB00ED2F76 /* NSData+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4921FBA1B0680EB00ED2F76 /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = E4921FB31B0680EB00ED2F76 /* NSData+Godzippa.m */; };
 		E4921FBB1B0680EB00ED2F76 /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = E4921FB31B0680EB00ED2F76 /* NSData+Godzippa.m */; };
-		E4921FBC1B0680EB00ED2F76 /* NSFileManager+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB41B0680EB00ED2F76 /* NSFileManager+Godzippa.h */; };
-		E4921FBD1B0680EB00ED2F76 /* NSFileManager+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB41B0680EB00ED2F76 /* NSFileManager+Godzippa.h */; };
+		E4921FBC1B0680EB00ED2F76 /* NSFileManager+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB41B0680EB00ED2F76 /* NSFileManager+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4921FBD1B0680EB00ED2F76 /* NSFileManager+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB41B0680EB00ED2F76 /* NSFileManager+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4921FBE1B0680EB00ED2F76 /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = E4921FB51B0680EB00ED2F76 /* NSFileManager+Godzippa.m */; };
 		E4921FBF1B0680EB00ED2F76 /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = E4921FB51B0680EB00ED2F76 /* NSFileManager+Godzippa.m */; };
-		E4921FC01B0680EB00ED2F76 /* Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB61B0680EB00ED2F76 /* Godzippa.h */; };
-		E4921FC11B0680EB00ED2F76 /* Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB61B0680EB00ED2F76 /* Godzippa.h */; };
+		E4921FC01B0680EB00ED2F76 /* Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB61B0680EB00ED2F76 /* Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4921FC11B0680EB00ED2F76 /* Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = E4921FB61B0680EB00ED2F76 /* Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
