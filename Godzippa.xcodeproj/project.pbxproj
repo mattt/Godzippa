@@ -15,16 +15,16 @@
 		4320A83C1BB1FF9300AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A83B1BB1FF9300AE91E2 /* libz.tbd */; };
 		4320A83F1BB2002C00AE91E2 /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320A8341BB1FF4100AE91E2 /* NSFileManager+Godzippa.m */; settings = {ASSET_TAGS = (); }; };
 		4320A8401BB2002C00AE91E2 /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320A8321BB1FF4100AE91E2 /* NSData+Godzippa.m */; settings = {ASSET_TAGS = (); }; };
-		4320A8421BB2002C00AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A83B1BB1FF9300AE91E2 /* libz.tbd */; };
 		4320A8441BB2002C00AE91E2 /* NSFileManager+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A8331BB1FF4100AE91E2 /* NSFileManager+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A8451BB2002C00AE91E2 /* Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A82B1BB1FEDB00AE91E2 /* Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A8461BB2002C00AE91E2 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A8311BB1FF4100AE91E2 /* NSData+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A84F1BB2030C00AE91E2 /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320A8341BB1FF4100AE91E2 /* NSFileManager+Godzippa.m */; settings = {ASSET_TAGS = (); }; };
 		4320A8501BB2030C00AE91E2 /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320A8321BB1FF4100AE91E2 /* NSData+Godzippa.m */; settings = {ASSET_TAGS = (); }; };
-		4320A8521BB2030C00AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A83B1BB1FF9300AE91E2 /* libz.tbd */; };
 		4320A8541BB2030C00AE91E2 /* NSFileManager+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A8331BB1FF4100AE91E2 /* NSFileManager+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A8551BB2030C00AE91E2 /* Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A82B1BB1FEDB00AE91E2 /* Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A8561BB2030C00AE91E2 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A8311BB1FF4100AE91E2 /* NSData+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4320A8771BB207D100AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8761BB207D100AE91E2 /* libz.tbd */; };
+		4320A8791BB207DC00AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8781BB207DC00AE91E2 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +38,8 @@
 		4320A83B1BB1FF9300AE91E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4320A84B1BB2002C00AE91E2 /* Godzippa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Godzippa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4320A85B1BB2030C00AE91E2 /* Godzippa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Godzippa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4320A8761BB207D100AE91E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		4320A8781BB207DC00AE91E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4320A8421BB2002C00AE91E2 /* libz.tbd in Frameworks */,
+				4320A8791BB207DC00AE91E2 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4320A8521BB2030C00AE91E2 /* libz.tbd in Frameworks */,
+				4320A8771BB207D100AE91E2 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +73,9 @@
 		4320A81C1BB1FE2D00AE91E2 = {
 			isa = PBXGroup;
 			children = (
-				4320A83B1BB1FF9300AE91E2 /* libz.tbd */,
 				4320A82A1BB1FEDB00AE91E2 /* Godzippa */,
 				4320A8291BB1FEDB00AE91E2 /* Products */,
+				4320A87A1BB207E900AE91E2 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +100,16 @@
 				4320A82D1BB1FEDB00AE91E2 /* Info.plist */,
 			);
 			path = Godzippa;
+			sourceTree = "<group>";
+		};
+		4320A87A1BB207E900AE91E2 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4320A83B1BB1FF9300AE91E2 /* libz.tbd */,
+				4320A8781BB207DC00AE91E2 /* libz.tbd */,
+				4320A8761BB207D100AE91E2 /* libz.tbd */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,6 +645,7 @@
 				4320A82F1BB1FEDB00AE91E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4320A8481BB2002C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-iOS" */ = {
 			isa = XCConfigurationList;
