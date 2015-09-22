@@ -24,6 +24,10 @@
 
 #import <zlib.h>
 
+#import "GodzippaDefines.h"
+
+__GODZIPPA_ASSUME_NONNULL_BEGIN
+
 /**
  Godzippa provides a category on `NSFileManager` to inflate and deflate files using gzip compression.
  */
@@ -76,3 +80,5 @@
                      error:(NSError * __autoreleasing *)error;
 
 @end
+
+__GODZIPPA_ASSUME_NONNULL_END

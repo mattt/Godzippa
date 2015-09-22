@@ -33,10 +33,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4320A86D1BB2048300AE91E2 /* GodzippaDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodzippaDefines.h; sourceTree = "<group>"; };
 		5772CA851A0023E900C9F54F /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
 		5772CA861A0023E900C9F54F /* NSFileManager+Godzippa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Godzippa.m"; sourceTree = "<group>"; };
 		5772CA871A0023E900C9F54F /* Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
-		E2651A82173CC6370091504C /* Godzippa Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa Test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2651A82173CC6370091504C /* Godzippa Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Godzippa Test.octest"; path = "Godzippa Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2651A85173CC6370091504C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E2651A88173CC6370091504C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E2651A89173CC6370091504C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -169,6 +170,7 @@
 				5772CA851A0023E900C9F54F /* NSFileManager+Godzippa.h */,
 				5772CA861A0023E900C9F54F /* NSFileManager+Godzippa.m */,
 				5772CA871A0023E900C9F54F /* Godzippa.h */,
+				4320A86D1BB2048300AE91E2 /* GodzippaDefines.h */,
 			);
 			name = Godzippa;
 			path = ../Godzippa;

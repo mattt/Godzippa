@@ -24,6 +24,10 @@
 
 #import <zlib.h>
 
+#import "GodzippaDefines.h"
+
+__GODZIPPA_ASSUME_NONNULL_BEGIN
+
 /**
  Godzippa provides a category on `NSData` to inflate and deflate data using gzip compression.
  */
@@ -40,7 +44,7 @@
 
  @return The compressed data.
  */
-- (NSData *)dataByGZipCompressingWithError:(NSError * __autoreleasing *)error;
+- (NSData * __GODZIPPA_NULLABLE)dataByGZipCompressingWithError:(NSError * __autoreleasing *)error;
 
 /**
  Returns the deflated of the receiver using gzip compression with the specified zlib values for compression level, window size, internal memory allocation, and strategy.
@@ -53,11 +57,11 @@
 
  @return The compressed data.
  */
-- (NSData *)dataByGZipCompressingAtLevel:(int)level
-                              windowSize:(int)windowBits
-                             memoryLevel:(int)memLevel
-                                strategy:(int)strategy
-                                   error:(NSError * __autoreleasing *)error;
+- (NSData * __GODZIPPA_NULLABLE)dataByGZipCompressingAtLevel:(int)level
+                                                  windowSize:(int)windowBits
+                                                 memoryLevel:(int)memLevel
+                                                    strategy:(int)strategy
+                                                       error:(NSError * __autoreleasing *)error;
 
 ///--------------------
 /// @name Decompressing
@@ -70,7 +74,7 @@
 
  @return The decompressed data.
  */
-- (NSData *)dataByGZipDecompressingDataWithError:(NSError * __autoreleasing *)error;
+- (NSData * __GODZIPPA_NULLABLE)dataByGZipDecompressingDataWithError:(NSError * __autoreleasing *)error;
 
 /**
  Returns the inflated of the receiver using gzip compression with the specified zlib value for window size.
@@ -80,8 +84,8 @@
 
  @return The decompressed data.
  */
-- (NSData *)dataByGZipDecompressingDataWithWindowSize:(int)windowBits
-                                                error:(NSError * __autoreleasing *)error;
+- (NSData * __GODZIPPA_NULLABLE)dataByGZipDecompressingDataWithWindowSize:(int)windowBits
+                                                                    error:(NSError * __autoreleasing *)error;
 
 @end
 
@@ -96,3 +100,5 @@
  Godzippa errors. Error codes for `GodzippaZlibErrorDomain` correspond to status codes from zlib.
  */
 extern NSString * const GodzippaZlibErrorDomain;
+
+__GODZIPPA_ASSUME_NONNULL_END

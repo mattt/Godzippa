@@ -1,0 +1,9 @@
+#if __has_feature(nullability)
+    #define __GODZIPPA_ASSUME_NONNULL_BEGIN NS_ASSUME_NONNULL_BEGIN
+    #define __GODZIPPA_ASSUME_NONNULL_END   NS_ASSUME_NONNULL_END
+    #define __GODZIPPA_NULLABLE __nullable
+#else
+    #define __GODZIPPA_ASSUME_NONNULL_BEGIN
+    #define __GODZIPPA_ASSUME_NONNULL_END
+    #define __GODZIPPA_NULLABLE
+#endif
