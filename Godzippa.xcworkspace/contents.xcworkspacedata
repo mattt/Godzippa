@@ -19,6 +19,9 @@
       <FileRef
          location = "group:Godzippa.h">
       </FileRef>
+      <FileRef
+         location = "group:GodzippaDefines.h">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Example/Godzippa Example.xcodeproj">
