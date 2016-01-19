@@ -20,5 +20,5 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSData+Godzippa.h"
-#import "NSFileManager+Godzippa.h"
+#import <Godzippa/NSData+Godzippa.h>
+#import <Godzippa/NSFileManager+Godzippa.h>
