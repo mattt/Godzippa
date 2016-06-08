@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7511590A19A4FE08B8F7B35130611643839065D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "579334E012F86C74CA28C05F351A66324C25219D" : 0,
+    "7511590A19A4FE08B8F7B35130611643839065D3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50796435-29CB-4DAC-AB27-A5BC4E48BC61",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "579334E012F86C74CA28C05F351A66324C25219D" : "..\/..",
+    "7511590A19A4FE08B8F7B35130611643839065D3" : "Godzippa\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Godzippa",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Godzippa.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rkadam\/rsvp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "579334E012F86C74CA28C05F351A66324C25219D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/joshuakuai\/Godzippa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7511590A19A4FE08B8F7B35130611643839065D3"
+    }
+  ]
+}
