@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "NSFileManager+Godzippa.h"
+#include <zlib.h>
 
 static const int kGodzippaChunkSize = 4096;
 
