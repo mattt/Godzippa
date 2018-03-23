@@ -36,7 +36,7 @@
 		5772CA851A0023E900C9F54F /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
 		5772CA861A0023E900C9F54F /* NSFileManager+Godzippa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Godzippa.m"; sourceTree = "<group>"; };
 		5772CA871A0023E900C9F54F /* Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
-		E2651A82173CC6370091504C /* Godzippa Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa Test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2651A82173CC6370091504C /* Godzippa Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Godzippa Test.octest"; path = "Godzippa Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2651A85173CC6370091504C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E2651A88173CC6370091504C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E2651A89173CC6370091504C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -184,7 +184,6 @@
 				E2651A7D173CC6370091504C /* Sources */,
 				E2651A7E173CC6370091504C /* Frameworks */,
 				E2651A7F173CC6370091504C /* Resources */,
-				E2651A80173CC6370091504C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,22 +248,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E2651A80173CC6370091504C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2651A7D173CC6370091504C /* Sources */ = {
