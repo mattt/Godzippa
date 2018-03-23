@@ -22,8 +22,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <zlib.h>
-
 /**
  Godzippa provides a category on `NSFileManager` to inflate and deflate files using gzip compression.
  */

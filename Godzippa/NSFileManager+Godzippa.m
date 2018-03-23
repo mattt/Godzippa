@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <zlib.h>
 #import "NSFileManager+Godzippa.h"
 
 static const int kGodzippaChunkSize = 4096;
