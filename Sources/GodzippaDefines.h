@@ -20,6 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "GodzippaDefines.h"
-#import "NSData+Godzippa.h"
-#import "NSFileManager+Godzippa.h"
+#ifndef GodzippaDefines_h
+#define GodzippaDefines_h
+
+#if __has_feature(nullability)
+    #define __GODZIPPA_ASSUME_NONNULL_BEGIN NS_ASSUME_NONNULL_BEGIN
+    #define __GODZIPPA_ASSUME_NONNULL_END   NS_ASSUME_NONNULL_END
+    #define __GODZIPPA_NULLABLE nullable
+#else
+    #define __GODZIPPA_ASSUME_NONNULL_BEGIN
+    #define __GODZIPPA_ASSUME_NONNULL_END
+    #define __GODZIPPA_NULLABLE
+#endif
+
+#if defined(__has_attribute)
+    #if __has_attribute(swift_name)
+        #define __GODZIPPA_SWIFT_NAME(X) __attribute__((swift_name(#X)))
+    #else
+        #define __GODZIPPA_SWIFT_NAME(X)
+    #endif
+#endif
+#endif /* GodzippaDefines_h */

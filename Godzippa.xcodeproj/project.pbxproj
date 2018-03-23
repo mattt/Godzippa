@@ -39,6 +39,9 @@
 		F80740DD2065538B00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A84B1BB2002C00AE91E2 /* Godzippa.framework */; };
 		F8458A6A206555D600629214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8458A69206555D600629214 /* main.m */; };
 		F8458A6E206555FE00629214 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */; };
+		F86EC9B02065655000AA9C1D /* GodzippaDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F86EC9AF2065655000AA9C1D /* GodzippaDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F86EC9B12065655000AA9C1D /* GodzippaDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F86EC9AF2065655000AA9C1D /* GodzippaDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F86EC9B22065655000AA9C1D /* GodzippaDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F86EC9AF2065655000AA9C1D /* GodzippaDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,7 @@
 		F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8458A67206555D600629214 /* Godzippa Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Godzippa Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8458A69206555D600629214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F86EC9AF2065655000AA9C1D /* GodzippaDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodzippaDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4320A82B1BB1FEDB00AE91E2 /* Godzippa.h */,
+				F86EC9AF2065655000AA9C1D /* GodzippaDefines.h */,
 				4320A8311BB1FF4100AE91E2 /* NSData+Godzippa.h */,
 				4320A8321BB1FF4100AE91E2 /* NSData+Godzippa.m */,
 				4320A8331BB1FF4100AE91E2 /* NSFileManager+Godzippa.h */,
@@ -241,8 +246,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4320A8381BB1FF4100AE91E2 /* NSFileManager+Godzippa.h in Headers */,
+				F86EC9B02065655000AA9C1D /* GodzippaDefines.h in Headers */,
 				4320A82C1BB1FEDB00AE91E2 /* Godzippa.h in Headers */,
+				4320A8381BB1FF4100AE91E2 /* NSFileManager+Godzippa.h in Headers */,
 				4320A8361BB1FF4100AE91E2 /* NSData+Godzippa.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +259,7 @@
 			files = (
 				4320A8441BB2002C00AE91E2 /* NSFileManager+Godzippa.h in Headers */,
 				4320A8451BB2002C00AE91E2 /* Godzippa.h in Headers */,
+				F86EC9B12065655000AA9C1D /* GodzippaDefines.h in Headers */,
 				4320A8461BB2002C00AE91E2 /* NSData+Godzippa.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 			files = (
 				4320A8541BB2030C00AE91E2 /* NSFileManager+Godzippa.h in Headers */,
 				4320A8551BB2030C00AE91E2 /* Godzippa.h in Headers */,
+				F86EC9B22065655000AA9C1D /* GodzippaDefines.h in Headers */,
 				4320A8561BB2030C00AE91E2 /* NSData+Godzippa.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

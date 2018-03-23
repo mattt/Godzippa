@@ -22,6 +22,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "GodzippaDefines.h"
+
+__GODZIPPA_ASSUME_NONNULL_BEGIN
+
 /**
  Godzippa provides a category on `NSData` to inflate and deflate data using gzip compression.
  */
@@ -38,7 +42,7 @@
 
  @return The compressed data.
  */
-- (NSData *)dataByGZipCompressingWithError:(NSError * __autoreleasing *)error NS_SWIFT_NAME(gzipCompressed());
+- (__GODZIPPA_NULLABLE NSData *)dataByGZipCompressingWithError:(NSError * __autoreleasing *)error __GODZIPPA_SWIFT_NAME(gzipCompressed());
 
 /**
  Returns the deflated of the receiver using gzip compression with the specified zlib values for compression level, window size, internal memory allocation, and strategy.
@@ -51,11 +55,12 @@
 
  @return The compressed data.
  */
-- (NSData *)dataByGZipCompressingAtLevel:(int)level
-                              windowSize:(int)windowBits
-                             memoryLevel:(int)memLevel
-                                strategy:(int)strategy
-                                   error:(NSError * __autoreleasing *)error NS_SWIFT_NAME(gzipCompressed(at:windowSize:memoryLevel:strategy:));
+- (__GODZIPPA_NULLABLE NSData *)dataByGZipCompressingAtLevel:(int)level
+                                                  windowSize:(int)windowBits
+                                                 memoryLevel:(int)memLevel
+                                                    strategy:(int)strategy
+                                                       error:(NSError * __autoreleasing *)error
+    __GODZIPPA_SWIFT_NAME(gzipCompressed(at:windowSize:memoryLevel:strategy:));
 
 ///--------------------
 /// @name Decompressing
@@ -68,7 +73,8 @@
 
  @return The decompressed data.
  */
-- (NSData *)dataByGZipDecompressingDataWithError:(NSError * __autoreleasing *)error NS_SWIFT_NAME(gzipDecompressed());
+- (__GODZIPPA_NULLABLE NSData *)dataByGZipDecompressingDataWithError:(NSError * __autoreleasing *)error
+    __GODZIPPA_SWIFT_NAME(gzipDecompressed());
 
 /**
  Returns the inflated of the receiver using gzip compression with the specified zlib value for window size.
@@ -78,9 +84,9 @@
 
  @return The decompressed data.
  */
-- (NSData *)dataByGZipDecompressingDataWithWindowSize:(int)windowBits
-                                                error:(NSError * __autoreleasing *)error 
-NS_SWIFT_NAME(gzipDecompressed(windowSize:));
+- (__GODZIPPA_NULLABLE NSData *)dataByGZipDecompressingDataWithWindowSize:(int)windowBits
+                                                                    error:(NSError * __autoreleasing *)error
+    __GODZIPPA_SWIFT_NAME(gzipDecompressed(windowSize:));
 
 @end
 
@@ -95,3 +101,5 @@ NS_SWIFT_NAME(gzipDecompressed(windowSize:));
  Godzippa errors. Error codes for `GodzippaZlibErrorDomain` correspond to status codes from zlib.
  */
 extern NSString * const GodzippaZlibErrorDomain;
+
+__GODZIPPA_ASSUME_NONNULL_END
