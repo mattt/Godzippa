@@ -1,4 +1,5 @@
 # Godzippa!
+
 **gzip Compression / Decompression Category for NSData & NSFileManager**
 
 ## Example Usage
@@ -26,15 +27,11 @@ NSError *error = nil;
 
 ## Requirements
 
-- **zlib** - In the "Link Binary With Libraries" Build Phase of your Target, add `libz.dylib`
+* **zlib** - In the "Link Binary With Libraries" Build Phase of your Target, add `libz.dylib`
 
 ## Contact
 
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
+Mattt ([@mattt](http://twitter.com/mattt))
 
 ## License
 
