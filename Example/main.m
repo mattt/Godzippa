@@ -19,9 +19,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-
-#import "NSData+Godzippa.h"
+@import Foundation;
+@import Godzippa;
 
 int main(__unused int argc, __unused const char *argv[]) {
     @autoreleasepool {

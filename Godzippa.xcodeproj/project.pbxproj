@@ -37,6 +37,8 @@
 		F80740CE2065536400107A43 /* GodzippaDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740922065504400107A43 /* GodzippaDataTestCase.m */; };
 		F80740DA2065537F00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A85B1BB2030C00AE91E2 /* Godzippa.framework */; };
 		F80740DD2065538B00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A84B1BB2002C00AE91E2 /* Godzippa.framework */; };
+		F8458A6A206555D600629214 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8458A69206555D600629214 /* main.m */; };
+		F8458A6E206555FE00629214 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F8458A65206555D600629214 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Godzippa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4320A82B1BB1FEDB00AE91E2 /* Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
@@ -82,6 +96,8 @@
 		F80740A02065508E00107A43 /* Godzippa macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80740C72065536300107A43 /* Godzippa iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8458A67206555D600629214 /* Godzippa Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Godzippa Example"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8458A69206555D600629214 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +149,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8458A64206555D600629214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8458A6E206555FE00629214 /* Godzippa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -141,6 +165,7 @@
 			children = (
 				4320A82A1BB1FEDB00AE91E2 /* Sources */,
 				F807408F2065504400107A43 /* Tests */,
+				F8458A68206555D600629214 /* Example */,
 				4320A8291BB1FEDB00AE91E2 /* Products */,
 				4320A87A1BB207E900AE91E2 /* Libraries */,
 				F80740D92065537F00107A43 /* Frameworks */,
@@ -156,6 +181,7 @@
 				F80740A02065508E00107A43 /* Godzippa macOS Tests.xctest */,
 				F80740C72065536300107A43 /* Godzippa iOS Tests.xctest */,
 				F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */,
+				F8458A67206555D600629214 /* Godzippa Example */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +224,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8458A68206555D600629214 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				F8458A69206555D600629214 /* main.m */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +378,23 @@
 			productReference = F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8458A66206555D600629214 /* Godzippa Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8458A6B206555D600629214 /* Build configuration list for PBXNativeTarget "Godzippa Example" */;
+			buildPhases = (
+				F8458A63206555D600629214 /* Sources */,
+				F8458A64206555D600629214 /* Frameworks */,
+				F8458A65206555D600629214 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Godzippa Example";
+			productName = "Godzippa Example";
+			productReference = F8458A67206555D600629214 /* Godzippa Example */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -363,6 +414,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					F80740C92065536400107A43 = {
+						ProvisioningStyle = Automatic;
+					};
+					F8458A66206555D600629214 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -385,6 +440,7 @@
 				F807409F2065508E00107A43 /* Godzippa macOS Tests */,
 				F80740BB2065536300107A43 /* Godzippa iOS Tests */,
 				F80740C92065536400107A43 /* Godzippa watchOS Tests */,
+				F8458A66206555D600629214 /* Godzippa Example */,
 			);
 		};
 /* End PBXProject section */
@@ -489,6 +545,14 @@
 			files = (
 				F80740CD2065536400107A43 /* GodzippaFileManagerTestCase.m in Sources */,
 				F80740CE2065536400107A43 /* GodzippaDataTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458A63206555D600629214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8458A6A206555D600629214 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,6 +1179,69 @@
 			};
 			name = Release;
 		};
+		F8458A6C206555D600629214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8458A6D206555D600629214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1177,6 +1304,15 @@
 			buildConfigurations = (
 				F80740D32065536400107A43 /* Debug */,
 				F80740D42065536400107A43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8458A6B206555D600629214 /* Build configuration list for PBXNativeTarget "Godzippa Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8458A6C206555D600629214 /* Debug */,
+				F8458A6D206555D600629214 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

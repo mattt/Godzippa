@@ -4,7 +4,4 @@
    <FileRef
       location = "group:Godzippa.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Example/Godzippa Example.xcodeproj">
-   </FileRef>
 </Workspace>
