@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'GZip Compression / Decompression Category for NSData and NSFileManager.'
   s.homepage = 'https://github.com/mattt/Godzippa'
   s.social_media_url = 'https://twitter.com/mattt'
-  s.author   = { 'Mattt Thompson' => 'm@mattt.me' }
+  s.author   = { 'Mattt' => 'mattt@me.com' }
   s.source   = { :git => 'https://github.com/mattt/Godzippa.git',
                  :tag => '1.1.0' }
   s.source_files = 'Sources/*'
