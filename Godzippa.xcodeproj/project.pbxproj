@@ -73,7 +73,7 @@
 		4320A81C1BB1FE2D00AE91E2 = {
 			isa = PBXGroup;
 			children = (
-				4320A82A1BB1FEDB00AE91E2 /* Godzippa */,
+				4320A82A1BB1FEDB00AE91E2 /* Sources */,
 				4320A8291BB1FEDB00AE91E2 /* Products */,
 				4320A87A1BB207E900AE91E2 /* Libraries */,
 			);
@@ -89,7 +89,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4320A82A1BB1FEDB00AE91E2 /* Godzippa */ = {
+		4320A82A1BB1FEDB00AE91E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				4320A82B1BB1FEDB00AE91E2 /* Godzippa.h */,
@@ -99,7 +99,7 @@
 				4320A8341BB1FF4100AE91E2 /* NSFileManager+Godzippa.m */,
 				4320A82D1BB1FEDB00AE91E2 /* Info.plist */,
 			);
-			path = Godzippa;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4320A87A1BB207E900AE91E2 /* Libraries */ = {
