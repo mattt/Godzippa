@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5772CA881A0023EE00C9F54F /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 5772CA861A0023E900C9F54F /* NSFileManager+Godzippa.m */; };
-		5772CA891A0023EE00C9F54F /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 5772CA861A0023E900C9F54F /* NSFileManager+Godzippa.m */; };
 		E2651A86173CC6370091504C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2651A85173CC6370091504C /* Cocoa.framework */; };
 		E2651A93173CC6370091504C /* GodzippaDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E2651A92173CC6370091504C /* GodzippaDataTestCase.m */; };
-		E2651A9F173CC6FC0091504C /* NSData+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = F86035A516AD0EE10027FDE8 /* NSData+Godzippa.m */; };
 		E2651AA0173CC7140091504C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F86035A716AD0F240027FDE8 /* libz.dylib */; };
 		F8551ED51A2325CA00FA70E2 /* GodzippaFileManagerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F8551ED41A2325CA00FA70E2 /* GodzippaFileManagerTestCase.m */; };
 		F860358D16AD0E4D0027FDE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F860358C16AD0E4D0027FDE8 /* Foundation.framework */; };
@@ -254,9 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2651A9F173CC6FC0091504C /* NSData+Godzippa.m in Sources */,
 				F8551ED51A2325CA00FA70E2 /* GodzippaFileManagerTestCase.m in Sources */,
-				5772CA891A0023EE00C9F54F /* NSFileManager+Godzippa.m in Sources */,
 				E2651A93173CC6370091504C /* GodzippaDataTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

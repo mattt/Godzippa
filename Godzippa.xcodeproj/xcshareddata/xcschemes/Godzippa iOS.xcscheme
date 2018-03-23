@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4320A84D1BB2030C00AE91E2"
+               BlueprintIdentifier = "4320A83D1BB2002C00AE91E2"
                BuildableName = "Godzippa.framework"
-               BlueprintName = "Godzippa-watchOS"
+               BlueprintName = "Godzippa iOS"
                ReferencedContainer = "container:Godzippa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,7 +29,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F80740BB2065536300107A43"
+               BuildableName = "Godzippa iOS Tests.xctest"
+               BlueprintName = "Godzippa iOS Tests"
+               ReferencedContainer = "container:Godzippa.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4320A83D1BB2002C00AE91E2"
+            BuildableName = "Godzippa.framework"
+            BlueprintName = "Godzippa iOS"
+            ReferencedContainer = "container:Godzippa.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -47,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4320A84D1BB2030C00AE91E2"
+            BlueprintIdentifier = "4320A83D1BB2002C00AE91E2"
             BuildableName = "Godzippa.framework"
-            BlueprintName = "Godzippa-watchOS"
+            BlueprintName = "Godzippa iOS"
             ReferencedContainer = "container:Godzippa.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +84,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4320A84D1BB2030C00AE91E2"
+            BlueprintIdentifier = "4320A83D1BB2002C00AE91E2"
             BuildableName = "Godzippa.framework"
-            BlueprintName = "Godzippa-watchOS"
+            BlueprintName = "Godzippa iOS"
             ReferencedContainer = "container:Godzippa.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

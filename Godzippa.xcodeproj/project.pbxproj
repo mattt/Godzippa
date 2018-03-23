@@ -25,7 +25,43 @@
 		4320A8561BB2030C00AE91E2 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A8311BB1FF4100AE91E2 /* NSData+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A8771BB207D100AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8761BB207D100AE91E2 /* libz.tbd */; };
 		4320A8791BB207DC00AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8781BB207DC00AE91E2 /* libz.tbd */; };
+		F80740962065504400107A43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F80740912065504400107A43 /* Info.plist */; };
+		F80740972065504400107A43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F80740912065504400107A43 /* Info.plist */; };
+		F80740982065504400107A43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F80740912065504400107A43 /* Info.plist */; };
+		F80740A52065508E00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */; };
+		F80740AB206550C400107A43 /* GodzippaFileManagerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740902065504400107A43 /* GodzippaFileManagerTestCase.m */; };
+		F80740AC206550C400107A43 /* GodzippaDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740922065504400107A43 /* GodzippaDataTestCase.m */; };
+		F80740BF2065536300107A43 /* GodzippaFileManagerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740902065504400107A43 /* GodzippaFileManagerTestCase.m */; };
+		F80740C02065536300107A43 /* GodzippaDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740922065504400107A43 /* GodzippaDataTestCase.m */; };
+		F80740CD2065536400107A43 /* GodzippaFileManagerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740902065504400107A43 /* GodzippaFileManagerTestCase.m */; };
+		F80740CE2065536400107A43 /* GodzippaDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740922065504400107A43 /* GodzippaDataTestCase.m */; };
+		F80740DA2065537F00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A85B1BB2030C00AE91E2 /* Godzippa.framework */; };
+		F80740DD2065538B00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A84B1BB2002C00AE91E2 /* Godzippa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F80740A62065508E00107A43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4320A81D1BB1FE2D00AE91E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4320A8271BB1FEDB00AE91E2;
+			remoteInfo = "Godzippa-OSX";
+		};
+		F80740D72065537900107A43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4320A81D1BB1FE2D00AE91E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4320A84D1BB2030C00AE91E2;
+			remoteInfo = "Godzippa watchOS";
+		};
+		F80740DB2065538800107A43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4320A81D1BB1FE2D00AE91E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4320A83D1BB2002C00AE91E2;
+			remoteInfo = "Godzippa iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Godzippa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +76,12 @@
 		4320A85B1BB2030C00AE91E2 /* Godzippa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Godzippa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4320A8761BB207D100AE91E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		4320A8781BB207DC00AE91E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		F80740902065504400107A43 /* GodzippaFileManagerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GodzippaFileManagerTestCase.m; sourceTree = "<group>"; };
+		F80740912065504400107A43 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80740922065504400107A43 /* GodzippaDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GodzippaDataTestCase.m; sourceTree = "<group>"; };
+		F80740A02065508E00107A43 /* Godzippa macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80740C72065536300107A43 /* Godzippa iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +109,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F807409D2065508E00107A43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740A52065508E00107A43 /* Godzippa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80740C12065536300107A43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740DD2065538B00107A43 /* Godzippa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80740CF2065536400107A43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740DA2065537F00107A43 /* Godzippa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,8 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				4320A82A1BB1FEDB00AE91E2 /* Sources */,
+				F807408F2065504400107A43 /* Tests */,
 				4320A8291BB1FEDB00AE91E2 /* Products */,
 				4320A87A1BB207E900AE91E2 /* Libraries */,
+				F80740D92065537F00107A43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +153,9 @@
 				4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */,
 				4320A84B1BB2002C00AE91E2 /* Godzippa.framework */,
 				4320A85B1BB2030C00AE91E2 /* Godzippa.framework */,
+				F80740A02065508E00107A43 /* Godzippa macOS Tests.xctest */,
+				F80740C72065536300107A43 /* Godzippa iOS Tests.xctest */,
+				F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +181,23 @@
 				4320A8761BB207D100AE91E2 /* libz.tbd */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		F807408F2065504400107A43 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F80740922065504400107A43 /* GodzippaDataTestCase.m */,
+				F80740902065504400107A43 /* GodzippaFileManagerTestCase.m */,
+				F80740912065504400107A43 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F80740D92065537F00107A43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +236,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4320A8271BB1FEDB00AE91E2 /* Godzippa-OSX */ = {
+		4320A8271BB1FEDB00AE91E2 /* Godzippa macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4320A8301BB1FEDB00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-OSX" */;
+			buildConfigurationList = 4320A8301BB1FEDB00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa macOS" */;
 			buildPhases = (
 				4320A8231BB1FEDB00AE91E2 /* Sources */,
 				4320A8241BB1FEDB00AE91E2 /* Frameworks */,
@@ -161,14 +249,14 @@
 			);
 			dependencies = (
 			);
-			name = "Godzippa-OSX";
+			name = "Godzippa macOS";
 			productName = Godzippa;
 			productReference = 4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4320A83D1BB2002C00AE91E2 /* Godzippa-iOS */ = {
+		4320A83D1BB2002C00AE91E2 /* Godzippa iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4320A8481BB2002C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-iOS" */;
+			buildConfigurationList = 4320A8481BB2002C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa iOS" */;
 			buildPhases = (
 				4320A83E1BB2002C00AE91E2 /* Sources */,
 				4320A8411BB2002C00AE91E2 /* Frameworks */,
@@ -179,14 +267,14 @@
 			);
 			dependencies = (
 			);
-			name = "Godzippa-iOS";
+			name = "Godzippa iOS";
 			productName = Godzippa;
 			productReference = 4320A84B1BB2002C00AE91E2 /* Godzippa.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4320A84D1BB2030C00AE91E2 /* Godzippa-watchOS */ = {
+		4320A84D1BB2030C00AE91E2 /* Godzippa watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4320A8581BB2030C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-watchOS" */;
+			buildConfigurationList = 4320A8581BB2030C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa watchOS" */;
 			buildPhases = (
 				4320A84E1BB2030C00AE91E2 /* Sources */,
 				4320A8511BB2030C00AE91E2 /* Frameworks */,
@@ -197,10 +285,64 @@
 			);
 			dependencies = (
 			);
-			name = "Godzippa-watchOS";
+			name = "Godzippa watchOS";
 			productName = Godzippa;
 			productReference = 4320A85B1BB2030C00AE91E2 /* Godzippa.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		F807409F2065508E00107A43 /* Godzippa macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80740A82065508E00107A43 /* Build configuration list for PBXNativeTarget "Godzippa macOS Tests" */;
+			buildPhases = (
+				F807409C2065508E00107A43 /* Sources */,
+				F807409D2065508E00107A43 /* Frameworks */,
+				F807409E2065508E00107A43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80740A72065508E00107A43 /* PBXTargetDependency */,
+			);
+			name = "Godzippa macOS Tests";
+			productName = "Godzippa macOS Tests";
+			productReference = F80740A02065508E00107A43 /* Godzippa macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F80740BB2065536300107A43 /* Godzippa iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80740C42065536300107A43 /* Build configuration list for PBXNativeTarget "Godzippa iOS Tests" */;
+			buildPhases = (
+				F80740BE2065536300107A43 /* Sources */,
+				F80740C12065536300107A43 /* Frameworks */,
+				F80740C32065536300107A43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80740DC2065538800107A43 /* PBXTargetDependency */,
+			);
+			name = "Godzippa iOS Tests";
+			productName = "Godzippa macOS Tests";
+			productReference = F80740C72065536300107A43 /* Godzippa iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F80740C92065536400107A43 /* Godzippa watchOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80740D22065536400107A43 /* Build configuration list for PBXNativeTarget "Godzippa watchOS Tests" */;
+			buildPhases = (
+				F80740CC2065536400107A43 /* Sources */,
+				F80740CF2065536400107A43 /* Frameworks */,
+				F80740D12065536400107A43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80740D82065537900107A43 /* PBXTargetDependency */,
+			);
+			name = "Godzippa watchOS Tests";
+			productName = "Godzippa macOS Tests";
+			productReference = F80740D52065536400107A43 /* Godzippa watchOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -212,6 +354,16 @@
 				TargetAttributes = {
 					4320A8271BB1FEDB00AE91E2 = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					F807409F2065508E00107A43 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F80740BB2065536300107A43 = {
+						ProvisioningStyle = Automatic;
+					};
+					F80740C92065536400107A43 = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -227,9 +379,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4320A8271BB1FEDB00AE91E2 /* Godzippa-OSX */,
-				4320A83D1BB2002C00AE91E2 /* Godzippa-iOS */,
-				4320A84D1BB2030C00AE91E2 /* Godzippa-watchOS */,
+				4320A8271BB1FEDB00AE91E2 /* Godzippa macOS */,
+				4320A83D1BB2002C00AE91E2 /* Godzippa iOS */,
+				4320A84D1BB2030C00AE91E2 /* Godzippa watchOS */,
+				F807409F2065508E00107A43 /* Godzippa macOS Tests */,
+				F80740BB2065536300107A43 /* Godzippa iOS Tests */,
+				F80740C92065536400107A43 /* Godzippa watchOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80740962065504400107A43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +402,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80740972065504400107A43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4320A8571BB2030C00AE91E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740982065504400107A43 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F807409E2065508E00107A43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80740C32065536300107A43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80740D12065536400107A43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +465,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F807409C2065508E00107A43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740AB206550C400107A43 /* GodzippaFileManagerTestCase.m in Sources */,
+				F80740AC206550C400107A43 /* GodzippaDataTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80740BE2065536300107A43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740BF2065536300107A43 /* GodzippaFileManagerTestCase.m in Sources */,
+				F80740C02065536300107A43 /* GodzippaDataTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80740CC2065536400107A43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80740CD2065536400107A43 /* GodzippaFileManagerTestCase.m in Sources */,
+				F80740CE2065536400107A43 /* GodzippaDataTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F80740A72065508E00107A43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4320A8271BB1FEDB00AE91E2 /* Godzippa macOS */;
+			targetProxy = F80740A62065508E00107A43 /* PBXContainerItemProxy */;
+		};
+		F80740D82065537900107A43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4320A84D1BB2030C00AE91E2 /* Godzippa watchOS */;
+			targetProxy = F80740D72065537900107A43 /* PBXContainerItemProxy */;
+		};
+		F80740DC2065538800107A43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4320A83D1BB2002C00AE91E2 /* Godzippa iOS */;
+			targetProxy = F80740DB2065538800107A43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4320A8211BB1FE2D00AE91E2 /* Debug */ = {
@@ -391,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Godzippa/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -442,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Godzippa/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -500,7 +724,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Godzippa/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -553,7 +777,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Godzippa/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -611,7 +835,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Godzippa/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -664,7 +888,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Godzippa/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -675,6 +899,219 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F80740A92065508E00107A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.Godzippa-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F80740AA2065508E00107A43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.Godzippa-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F80740C52065536300107A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.Godzippa-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F80740C62065536300107A43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.Godzippa-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F80740D32065536400107A43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.Godzippa-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F80740D42065536400107A43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.Godzippa-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -690,7 +1127,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4320A8301BB1FEDB00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-OSX" */ = {
+		4320A8301BB1FEDB00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4320A82E1BB1FEDB00AE91E2 /* Debug */,
@@ -699,7 +1136,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4320A8481BB2002C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-iOS" */ = {
+		4320A8481BB2002C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4320A8491BB2002C00AE91E2 /* Debug */,
@@ -708,11 +1145,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4320A8581BB2030C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa-watchOS" */ = {
+		4320A8581BB2030C00AE91E2 /* Build configuration list for PBXNativeTarget "Godzippa watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4320A8591BB2030C00AE91E2 /* Debug */,
 				4320A85A1BB2030C00AE91E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80740A82065508E00107A43 /* Build configuration list for PBXNativeTarget "Godzippa macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80740A92065508E00107A43 /* Debug */,
+				F80740AA2065508E00107A43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80740C42065536300107A43 /* Build configuration list for PBXNativeTarget "Godzippa iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80740C52065536300107A43 /* Debug */,
+				F80740C62065536300107A43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80740D22065536400107A43 /* Build configuration list for PBXNativeTarget "Godzippa watchOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80740D32065536400107A43 /* Debug */,
+				F80740D42065536400107A43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
