@@ -36,13 +36,15 @@
 		5772CA851A0023E900C9F54F /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
 		5772CA861A0023E900C9F54F /* NSFileManager+Godzippa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Godzippa.m"; sourceTree = "<group>"; };
 		5772CA871A0023E900C9F54F /* Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Godzippa.h; sourceTree = "<group>"; };
-		E2651A82173CC6370091504C /* Godzippa Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa Test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2651A82173CC6370091504C /* Godzippa Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Godzippa Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2651A85173CC6370091504C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		E2651A88173CC6370091504C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E2651A89173CC6370091504C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E2651A8A173CC6370091504C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2651A8D173CC6370091504C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2651A92173CC6370091504C /* GodzippaDataTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodzippaDataTestCase.m; sourceTree = "<group>"; };
+		E4921F531B065C7D00ED2F76 /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Godzippa.h"; path = "../Godzippa/NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
+		E4921F551B065C8600ED2F76 /* NSData+Godzippa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+Godzippa.h"; path = "../Godzippa/NSData+Godzippa.h"; sourceTree = "<group>"; };
 		F8551ED41A2325CA00FA70E2 /* GodzippaFileManagerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GodzippaFileManagerTestCase.m; sourceTree = "<group>"; };
 		F860358816AD0E4D0027FDE8 /* Godzippa Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Godzippa Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F860358C16AD0E4D0027FDE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +109,8 @@
 		F860357D16AD0E4C0027FDE8 = {
 			isa = PBXGroup;
 			children = (
+				E4921F551B065C8600ED2F76 /* NSData+Godzippa.h */,
+				E4921F531B065C7D00ED2F76 /* NSFileManager+Godzippa.h */,
 				F860358E16AD0E4D0027FDE8 /* Source */,
 				E2651A8B173CC6370091504C /* Tests */,
 				F860358B16AD0E4D0027FDE8 /* Frameworks */,
@@ -119,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F860358816AD0E4D0027FDE8 /* Godzippa Example */,
-				E2651A82173CC6370091504C /* Godzippa Test.octest */,
+				E2651A82173CC6370091504C /* Godzippa Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,7 +196,7 @@
 			);
 			name = "Godzippa Tests";
 			productName = "Godzippa Test";
-			productReference = E2651A82173CC6370091504C /* Godzippa Test.octest */;
+			productReference = E2651A82173CC6370091504C /* Godzippa Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F860358716AD0E4D0027FDE8 /* Godzippa Example */ = {
