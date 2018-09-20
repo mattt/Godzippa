@@ -155,4 +155,14 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
     return decompressedData;
 }
 
+- (BOOL)isGzipCompressed {
+    if (self.length < 3) {
+        return NO;
+    }
+    
+    NSData *subdata = [self subdataWithRange:NSMakeRange(0, 3)];
+    const Byte *bytes = (const Byte *)subdata.bytes;
+    return bytes[0] == 0x1f && bytes[1] == 0x8b && bytes[2] == 0x08;
+}
+
 @end

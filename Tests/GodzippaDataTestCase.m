@@ -64,4 +64,11 @@
 	XCTAssertTrue([self.data isEqualToData:decompressedData], @"decompression of compressed data not same as original");
 }
 
+- (void)testDetectionOfCompressedData {
+    NSData *compressedData = [self.data dataByGZipCompressingWithError:nil];
+    
+    XCTAssertFalse(self.data.isGzipCompressed, @"original data shouldn't be identified as gzip compressed");
+    XCTAssertTrue(compressedData.isGzipCompressed, @"compressed data should be identified as gzip compressed");
+}
+
 @end

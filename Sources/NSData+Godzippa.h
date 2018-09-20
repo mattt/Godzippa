@@ -88,6 +88,17 @@ __GODZIPPA_ASSUME_NONNULL_BEGIN
                                                                     error:(NSError * __autoreleasing *)error
     __GODZIPPA_SWIFT_NAME(gzipDecompressed(windowSize:));
 
+///---------------------------------------------
+/// @name Determining Whether Data is Compressed
+///---------------------------------------------
+
+/**
+ Whether the receiver contains gzip compressed data.
+ 
+ This method checks the first three bytes for the gzip signature `1F 8B 08`.
+ */
+@property (readonly, nonatomic, getter=isGzipCompressed) BOOL gzipCompressed;
+
 @end
 
 ///----------------
