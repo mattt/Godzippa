@@ -25,9 +25,6 @@
 		4320A8561BB2030C00AE91E2 /* NSData+Godzippa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4320A8311BB1FF4100AE91E2 /* NSData+Godzippa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4320A8771BB207D100AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8761BB207D100AE91E2 /* libz.tbd */; };
 		4320A8791BB207DC00AE91E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8781BB207DC00AE91E2 /* libz.tbd */; };
-		F80740962065504400107A43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F80740912065504400107A43 /* Info.plist */; };
-		F80740972065504400107A43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F80740912065504400107A43 /* Info.plist */; };
-		F80740982065504400107A43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F80740912065504400107A43 /* Info.plist */; };
 		F80740A52065508E00107A43 /* Godzippa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320A8281BB1FEDB00AE91E2 /* Godzippa.framework */; };
 		F80740AB206550C400107A43 /* GodzippaFileManagerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740902065504400107A43 /* GodzippaFileManagerTestCase.m */; };
 		F80740AC206550C400107A43 /* GodzippaDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F80740922065504400107A43 /* GodzippaDataTestCase.m */; };
@@ -458,7 +455,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80740962065504400107A43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +462,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80740972065504400107A43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80740982065504400107A43 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
