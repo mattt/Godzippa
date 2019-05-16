@@ -1,6 +1,6 @@
 // NSData+Godzippa.m
 //
-// Copyright (c) 2012 – 2018 Mattt (http://mat.tt/)
+// Copyright (c) 2012 – 2019 Mattt (http://mat.tt/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -159,7 +159,7 @@ NSString * const GodzippaZlibErrorDomain = @"com.godzippa.zlib.error";
     if (self.length < 3) {
         return NO;
     }
-    
+
     NSData *subdata = [self subdataWithRange:NSMakeRange(0, 3)];
     const Byte *bytes = (const Byte *)subdata.bytes;
     return bytes[0] == 0x1f && bytes[1] == 0x8b && bytes[2] == 0x08;
