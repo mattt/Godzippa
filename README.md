@@ -33,6 +33,12 @@ github "mattt/Godzippa" ~> 2.1.1
 Then run the `carthage update` command to build the framework,
 and drag the built Godzippa.framework into your Xcode project.
 
+### Manual Installation
+
+Copy the `.h` and `.m` files in the `Sources` directory to your project.
+In the "Link Binary With Libraries" Build Phase of your Target,
+add `libz.dylib`.
+
 ## Usage
 
 ### Objective-C
@@ -78,10 +84,6 @@ let textFile = URL(fileURLWithPath: "/path/to/file.txt")
 let gzipFile = textFile.appendingPathExtension("gz")
 try fileManager.gzipCompressFile(at: textFile, to: gzipFile)
 ```
-
-## Requirements
-
-- **zlib** - In the "Link Binary With Libraries" Build Phase of your Target, add `libz.dylib`
 
 ## Contact
 
