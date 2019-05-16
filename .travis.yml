@@ -2,3 +2,8 @@ osx_image: xcode10.2
 language: objective-c
 xcode_project: Godzippa.xcodeproj
 xcode_scheme: Godzippa macOS
+deploy:
+  provider: script
+  script: pod trunk push
+  on:
+    tags: true
