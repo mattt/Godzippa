@@ -8,3 +8,14 @@ let decompressedData = try! compressedData.gzipDecompressed()
 let decompressedString = String(data: decompressedData, encoding: .utf8)
 
 originalString == decompressedString
+
+
+let fileManager = FileManager.default
+guard let textFile = Bundle.main.url(forResource: "file", withExtension: "txt") else {
+    fatalError("Missing resource: file.txt")
+}
+print("Compressed: \(try fileSize(of: textFile))")
+
+let gzipFile = textFile.appendingPathExtension("gz")
+try fileManager.gzipCompressFile(at: textFile, to: gzipFile)
+print("Decompressed: \(try fileSize(of: gzipFile))")

@@ -4,7 +4,9 @@
 
 ## Example Usage
 
-### NSData
+### Objective-C
+
+#### NSData
 
 ```objective-c
 NSData *originalData = [@"Look out! It's..." dataUsingEncoding:NSUTF8StringEncoding];
@@ -13,7 +15,7 @@ NSData *decompressedData = [compressedData dataByGZipDecompressingDataWithError:
 NSLog(@"%@ %@", [NSString stringWithUTF8String:[decompressedData bytes]], @"Godzippa!");
 ```
 
-### NSFileManager
+#### NSFileManager
 
 ```objective-c
 NSFileManager *fileManager = [NSFileManager defaultManager];
