@@ -9,7 +9,31 @@
 
 **gzip Compression / Decompression Category for NSData & NSFileManager**
 
-## Example Usage
+### CocoaPods
+
+You can install `Godzippa` via CocoaPods,
+by adding the following line to your `Podfile`:
+
+```ruby
+pod 'Godzippa', '~> 2.1.1'
+```
+
+Run the `pod install` command to download the library
+and integrate it into your Xcode project.
+
+### Carthage
+
+To use `Godzippa` in your Xcode project using Carthage,
+specify it in `Cartfile`:
+
+```
+github "mattt/Godzippa" ~> 2.1.1
+```
+
+Then run the `carthage update` command to build the framework,
+and drag the built Godzippa.framework into your Xcode project.
+
+## Usage
 
 ### Objective-C
 
