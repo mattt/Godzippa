@@ -1,0 +1,4 @@
+osx_image: xcode10.2
+language: objective-c
+xcode_project: Godzippa.xcodeproj
+xcode_scheme: Godzippa macOS
