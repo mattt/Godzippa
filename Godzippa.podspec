@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Mattt' => 'mattt@me.com' }
   s.source   = { :git => 'https://github.com/mattt/Godzippa.git',
                  :tag => s.version }
-  s.source_files = 'Sources/*'
+  s.source_files = 'Sources/*.{h,m}'
   s.requires_arc = true
 
   s.library = 'z'
