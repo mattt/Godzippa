@@ -9,6 +9,12 @@
 
 **gzip Compression / Decompression Category for NSData & NSFileManager**
 
+> This library is no longer being maintained.
+> As of iOS 13+ and macOS 10.15+,
+> Foundation provides equivalent functionality through APIs like
+> [`compressed(using:)`](https://developer.apple.com/documentation/foundation/nsdata/3174960-compressed)
+> and [`decompressed(using:)`](https://developer.apple.com/documentation/foundation/nsdata/3174961-decompressed).
+
 ### CocoaPods
 
 You can install `Godzippa` via CocoaPods,
